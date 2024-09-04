@@ -123,3 +123,23 @@ function resetGameData(){
     userScore = 0;
     roundCounter = 1;
 }
+
+// The main function, it is the one responsible for running the game
+function playGame(){
+    while(roundCounter <= 5){
+
+        computerChoice = getComputerChoice();
+        userChoice = getUserChoice();
+
+        roundWinner = playRound(userChoice, computerChoice);
+
+        updateScore(roundWinner);
+
+        displayRoundData();
+        ++roundCounter;
+
+    }
+
+
+    displayGameWinner();
+}
