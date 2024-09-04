@@ -27,3 +27,18 @@ function getComputerChoice(){
         return "SCISSORS";
     }
 }
+
+// getUserChoice() function ask user to choose one of: "ROCK, PAPER, SCISSORS"
+// It also validate user input:
+    //if user didn't enter the right input it will keep asking until get the right value
+function getUserChoice(){
+    let userChoice = "";
+    userChoice = prompt("Choose one of: ROCK, PAPER, SCISSORS");
+    userChoice = userChoice.toUpperCase();
+
+    while((userChoice !== "ROCK") && (userChoice !== "PAPER") && (userChoice !== "SCISSORS")){
+        userChoice = prompt("Your weapon is NOT VALID, please enter one of: 'ROCK, PAPER, SCISSORS'");
+        userChoice = userChoice.toUpperCase();
+    }
+    return userChoice;
+}
