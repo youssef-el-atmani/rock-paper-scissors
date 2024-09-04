@@ -62,3 +62,15 @@ function playRound(userChoice, computerChoice){
         return "COMPUTER";
     }   
 }
+
+function updateScore(roundWinner){
+    if(roundWinner === "TIE"){
+        // DO NOTHING, UPDATE NOTHING
+    }
+    else if(roundWinner === "USER"){
+        ++userScore;
+    }
+    else {
+        ++computerScore;
+    }
+}
