@@ -75,6 +75,31 @@ function updateScore(roundWinner){
     }
 }
 
+function displayRoundData(){
+    if(roundWinner === "TIE" ){
+        console.log(`###############   Round Number: ${roundCounter}   ###############`);
+        console.log(`Your-Score  : 0${userScore}\t\t Computer-Score : 0${computerScore}`);
+        console.log(`Your Choice : ${userChoice}\t\t Computer Choice: ${computerChoice}`);
+        console.log("ROUND-WINNER: A TIE ROUND")
+        console.log(`\n`);
+    }
+    else if(roundWinner === "USER"){
+        console.log(`###############   Round Number: ${roundCounter}   ###############`);
+        console.log(`Your-score  : 0${userScore}\t\t Computer-Score : 0${computerScore}`);
+        console.log(`Your Choice : ${userChoice}\t\t Computer Choice: ${computerChoice}`);
+        console.log("ROUND-WINNER: USER")
+        console.log(`\n`);
+    }
+    else {
+        console.log(`###############   Round Number: ${roundCounter}   ###############`);
+        console.log(`Your-score  : 0${userScore}\t\t Computer-Score : 0${computerScore}`);
+        console.log(`Your Choice : ${userChoice}\t\t Computer Choice: ${computerChoice}`);
+        console.log("ROUND-WINNER: COMPUTER")
+        console.log(`\n`);
+    }
+
+}
+
 // resetGameData() returns the game to the initial state
 function resetGameData(){
     computerScore = 0;
