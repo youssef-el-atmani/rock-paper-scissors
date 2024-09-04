@@ -124,6 +124,13 @@ function resetGameData(){
     roundCounter = 1;
 }
 
+function newGame(){
+    console.clear();
+    resetGameData();
+    playGame();
+}
+
+
 // The main function, it is the one responsible for running the game
 function playGame(){
     while(roundCounter <= 5){
