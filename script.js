@@ -12,3 +12,18 @@ let userScore = 0;
 let roundCounter = 1;
 // DECLARE a var named roundWinner, and initialize it with empty string: ""
 let roundWinner = "";
+
+// getComputerChoice() returns one of: "ROCK, PAPER, SCISSORS"
+function getComputerChoice(){
+    let randNum = Math.round((Math.random())*100);//stores a number between 0 & 100;
+
+    if((randNum >= 0) && (randNum <= 33)){
+        return "ROCK";
+    }
+    else if ((randNum > 33) && (randNum <= 66)){
+        return "PAPER";
+    }
+    else {
+        return "SCISSORS";
+    }
+}
