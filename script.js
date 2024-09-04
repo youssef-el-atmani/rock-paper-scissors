@@ -149,6 +149,9 @@ function playGame(){
 
 
     displayGameWinner();
+
+    console.log(`\n`);
+    console.log("If you want to play a new game, call newGame() function from the console: just type newGame(), and don't forget the parenthesis ()")
 }
 
 playGame();
