@@ -74,3 +74,10 @@ function updateScore(roundWinner){
         ++computerScore;
     }
 }
+
+// resetGameData() returns the game to the initial state
+function resetGameData(){
+    computerScore = 0;
+    userScore = 0;
+    roundCounter = 1;
+}
