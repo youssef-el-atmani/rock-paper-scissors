@@ -42,3 +42,23 @@ function getUserChoice(){
     }
     return userChoice;
 }
+
+
+// playRound() function compare user & computer choices,
+// & returns winner, or "TIE" for a tie game
+function playRound(userChoice, computerChoice){
+    if(userChoice === computerChoice){
+        return "TIE";
+    }
+    else if(
+            ((userChoice === "ROCK")     &&     (computerChoice === "SCISSORS"))
+        ||  ((userChoice === "SCISSORS") &&     (computerChoice === "PAPER"))
+        ||  ((userChoice === "PAPER")    &&     (computerChoice === "ROCK"))
+    )
+    {//This block is related to the adjacent above "else if" statement
+        return "USER";
+    }
+    else {
+        return "COMPUTER";
+    }   
+}
