@@ -1,5 +1,8 @@
 # rock-paper-scissors
 [Live Preview](https://youssef-el-atmani.github.io/rock-paper-scissors/)
+
+The goal for this project is to practice coding mainly in basic JS
+
 # The Game PseudoCode
 // DECLARE a var named computerChoice, that store randomly one of : ROCK, PAPER, SCISSORS,      initialize it with empty string ""
 // DECLARE a var named userChoice, that will store the user choice, and                         initialize it with empty string ""
