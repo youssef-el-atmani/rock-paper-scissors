@@ -6,6 +6,12 @@ html {
 *::after {
     box-sizing: inherit;
 }
+/*main header*/
+h1 {
+    text-align: center;
+    color: rgb(255, 115, 0);
+}
+
 
 /* Score */
 .score {
@@ -38,7 +44,11 @@ html {
 .game-space {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 17px;
+    width: 800px;
+    /* background-color: antiquewhite; */
+    margin: auto;
 }
 
 
