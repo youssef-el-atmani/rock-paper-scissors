@@ -6,3 +6,30 @@ html {
 *::after {
     box-sizing: inherit;
 }
+
+/* Score */
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+.score h3 {
+    margin-bottom: 5px;
+    font-family: monospace;
+    font-size: 1.7rem;
+}
+.score .display{
+    display: flex;
+    gap: 10px;
+
+    font-size: 3rem;
+    /* font-family: 'Courier New', Courier, monospace; */
+
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 7px;
+    border-radius: 7px;
+    align-content: center;
+}
