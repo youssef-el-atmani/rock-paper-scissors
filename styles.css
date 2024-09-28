@@ -122,3 +122,15 @@ img {
 .reset:active {
     box-shadow: 0px 0px 15px rgba(240, 121, 42, 0.479);
 }
+
+/* Game status */
+.game-status {
+    width: 800px;
+    text-align: center;
+    margin: 3rem auto 1rem;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius:  1rem 0;
+
+    font-size: 2rem;
+}
