@@ -7,6 +7,8 @@ let userScore = 0;
 let roundCounter = 1;
 let roundWinner = "";
 
+let gameWinner = "";
+
 // getComputerChoice() returns one of: "ROCK, PAPER, SCISSORS"
 function getComputerChoice(){
     let randNum = Math.round((Math.random())*100);//stores a number between 0 & 100;
