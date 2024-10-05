@@ -59,15 +59,20 @@ function playRound(userChoice, computerChoice){
     }   
 }
 
-function updateScore(roundWinner){
+let computerScoreELem = document.querySelector('.score .computer');
+let userScoreElem = document.querySelector('.score .user');
+
+function updateScoreAndDisplayIt(roundWinner){
     if(roundWinner === "TIE"){
         // DO NOTHING, UPDATE NOTHING
     }
     else if(roundWinner === "USER"){
         ++userScore;
+        userScoreElem.textContent = userScore;
     }
     else {
         ++computerScore;
+        computerScoreELem.textContent = computerScore;
     }
 }
 
