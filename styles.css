@@ -134,3 +134,17 @@ img {
 
     font-size: 2rem;
 }
+
+/* Image Styling for Winner And Looser */
+.winner {
+    box-shadow: 0 0 20px rgb(0, 255, 0, 0.5);
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+
+}
+
+.looser {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    transform: scale(0.8);
+    transition-duration: 0.5s;
+}
