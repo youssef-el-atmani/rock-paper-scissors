@@ -45,7 +45,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 17px;
+    gap: 37px;
     width: 800px;
     /* background-color: antiquewhite; */
     margin: auto;
@@ -62,8 +62,10 @@ h1 {
 img {
     width: 250px;
 
-    border: 2px solid black;
     border-radius: 17px;
+    padding: 17px;
+
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.322);
 }
 
 /*Weapon buttons*/
@@ -137,20 +139,20 @@ img {
 
 /* Image Styling for Winner And Looser */
 .winner {
-    box-shadow: 0 0 20px rgb(0, 255, 0, 0.5);
+    box-shadow: 0 0 10px rgb(0, 255, 0, 0.5);
     transform: scale(1.1);
     transition-duration: 0.5s;
 
 }
 
 .looser {
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
     transform: scale(0.8);
     transition-duration: 0.5s;
 }
 
 .tie {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.322);
     transform: scale(1);
     transition-duration: 0.5s;
 }

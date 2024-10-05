@@ -9,6 +9,9 @@ let roundWinner = "";
 
 let gameWinner = "";
 
+let userImgDisplay = document.querySelector('.user-space img');
+let computerImgDisplay = document.querySelector('.computer-space img');
+
 // getComputerChoice() returns one of: "ROCK, PAPER, SCISSORS"
 function getComputerChoice(){
     let randNum = Math.round((Math.random())*100);//stores a number between 0 & 100;
@@ -93,28 +96,151 @@ function newGame(){
     playGame();
 }
 
-
+let gameStatusElem = document.querySelector('.game-status');
 // The main function, it is the one responsible for running the game
-function playGame(){
-    while(roundCounter <= 5){
+
+let btnContainer = document.querySelector('.weapons');
+
+btnContainer.addEventListener('click', playGame);
+
+function playGame(event){
+    if((userScore < 5) && (computerScore < 5) ){
+        gameStatusElem.textContent = "The Battle in ON";
+
+        let target = event.target;
+
+        // Will store one of ROCK, PAPER, SCISSORS in userChoice
+        // depending on the button the user will click
+        switch(target.id){
+            case "ROCK":
+                userChoice = "ROCK";
+                break;
+            case "PAPER":
+                userChoice = "PAPER";
+                break;
+            case "SCISSORS":
+                userChoice = "SCISSORS";
+                break;
+        }
 
         computerChoice = getComputerChoice();
-        userChoice = getUserChoice();
 
         roundWinner = playRound(userChoice, computerChoice);
 
-        updateScore(roundWinner);
+        updateScoreAndDisplayIt(roundWinner);
 
-        displayRoundData();
-        ++roundCounter;
+        if((computerScore === 5) || (userScore === 5)){
+            (computerScore === 5)? gameWinner = "computer": gameWinner = "user";
+
+            // remove the shadow and size effects
+            userImgDisplay.classList.remove('winner');
+            userImgDisplay.classList.remove('looser');
+            userImgDisplay.classList.remove('tie');
+
+            computerImgDisplay.classList.remove('winner');
+            computerImgDisplay.classList.remove('looser');
+            computerImgDisplay.classList.remove('tie');
+
+            // tie will add a gray background,
+            // and will return the images to their original size
+            computerImgDisplay.classList.add('tie');
+            userImgDisplay.classList.add('tie');
+
+            switch(gameWinner){
+                case "user":
+                    userImgDisplay.src = "./images/winner.png"
+                    computerImgDisplay.src = "./images/looser.png"
+                    gameStatusElem.textContent = "Congratulations: You're the Winner!!";
+
+
+                    break;
+                case "computer":
+                    userImgDisplay.src = "./images/looser.png";
+                    computerImgDisplay.src = "./images/winner.png";
+                    gameStatusElem.textContent = "Don't Give Up: You'll win another time!!";
+                    break;
+            }
+        }
+        else {
+            // display the weapon img that is related to the btn ..
+            // .. that was clicked by the user
+            switch(target.id){
+                case "ROCK":
+                    userImgDisplay.src = "./images/rock.png";
+                    break;
+                case "PAPER":
+                    userImgDisplay.src = "./images/paper.png";
+                    break;
+                case "SCISSORS":
+                    userImgDisplay.src = "./images/scissors.png";
+                    break;
+            }
+            
+            // display the weapon that has been chosen by computer
+            switch(computerChoice){
+                case "ROCK":
+                    computerImgDisplay.src = "./images/rock.png";
+                    break;
+                case "PAPER":
+                    computerImgDisplay.src = "./images/paper.png";
+                    break;
+                case "SCISSORS":
+                    computerImgDisplay.src = "./images/scissors.png";
+                    break;
+            }
+
+            // remove the classes
+            userImgDisplay.classList.remove('winner');
+            userImgDisplay.classList.remove('looser');
+            userImgDisplay.classList.remove('tie');
+
+            computerImgDisplay.classList.remove('winner');
+            computerImgDisplay.classList.remove('looser');
+            computerImgDisplay.classList.remove('tie');
+
+
+            switch(roundWinner){
+                case "USER":
+                    userImgDisplay.classList.add('winner');
+                    computerImgDisplay.classList.add('looser');
+                    break;
+                case "COMPUTER":
+                    userImgDisplay.classList.add('looser');
+                    computerImgDisplay.classList.add('winner');
+                    break;
+                default:
+                    userImgDisplay.classList.add('tie');
+                    computerImgDisplay.classList.add('tie');
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // computerChoice = getComputerChoice();
+        // userChoice = getUserChoice();
+
+        // roundWinner = playRound(userChoice, computerChoice);
+
+        // updateScore(roundWinner);
+
+        // displayRoundData();
+        // ++roundCounter;
 
     }
 
 
-    displayGameWinner();
+    // displayGameWinner();
 
-    console.log(`\n`);
-    console.log("If you want to play a new game, call newGame() function from the console: just type newGame(), and don't forget the parenthesis ()")
+    // console.log(`\n`);
+    // console.log("If you want to play a new game, call newGame() function from the console: just type newGame(), and don't forget the parenthesis ()")
 }
 
 // playGame();
