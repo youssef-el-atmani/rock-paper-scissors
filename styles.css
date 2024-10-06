@@ -66,6 +66,8 @@ img {
     padding: 17px;
 
     box-shadow: 0 0 10px rgba(128, 128, 128, 0.322);
+
+    transition-duration: 0.5s;
 }
 
 /*Weapon buttons*/
