@@ -85,9 +85,21 @@ function displayGameWinner(){
 
 // resetGameData() returns the game to the initial state
 function resetGameData(){
+
+    // reseting the score
     computerScore = 0;
+    computerScoreELem.textContent = computerScore;
+
     userScore = 0;
-    roundCounter = 1;
+    userScoreElem.textContent = userScore;
+
+    // reseting images
+    computerImgDisplay.src = "./images/sand-watch.png";
+    userImgDisplay.src = "./images/sand-watch.png";
+    resetImgEffects();
+
+    // resiting the Game status
+    gameStatusElem.textContent = "Waiting for game to start ...";
 }
 
 function newGame(){
@@ -102,6 +114,20 @@ let gameStatusElem = document.querySelector('.game-status');
 let btnContainer = document.querySelector('.weapons');
 
 btnContainer.addEventListener('click', playGame);
+
+const resetBtn = document.querySelector('.reset');
+resetBtn.addEventListener('click', resetGameData);
+
+
+function resetImgEffects(){
+    userImgDisplay.classList.remove('winner');
+    userImgDisplay.classList.remove('looser');
+    userImgDisplay.classList.remove('tie');
+
+    computerImgDisplay.classList.remove('winner');
+    computerImgDisplay.classList.remove('looser');
+    computerImgDisplay.classList.remove('tie');
+}
 
 function playGame(event){
     if((userScore < 5) && (computerScore < 5) ){
