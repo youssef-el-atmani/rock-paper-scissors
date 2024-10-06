@@ -8,8 +8,8 @@ let roundWinner = "";
 
 let gameWinner = "";
 
-let userImgDisplay = document.querySelector('.user-space img');
-let computerImgDisplay = document.querySelector('.computer-space img');
+const userImgDisplay = document.querySelector('.user-space img');
+const computerImgDisplay = document.querySelector('.computer-space img');
 
 // getComputerChoice() returns one of: "ROCK, PAPER, SCISSORS"
 function getComputerChoice(){
@@ -47,8 +47,8 @@ function playRound(userChoice, computerChoice){
     }   
 }
 
-let computerScoreELem = document.querySelector('.score .computer');
-let userScoreElem = document.querySelector('.score .user');
+const computerScoreELem = document.querySelector('.score .computer');
+const userScoreElem = document.querySelector('.score .user');
 
 function updateScoreAndDisplayIt(roundWinner){
     if(roundWinner === "TIE"){
@@ -83,10 +83,10 @@ function resetGameData(){
     gameStatusElem.textContent = "Waiting for game to start ...";
 }
 
-let gameStatusElem = document.querySelector('.game-status');
+const gameStatusElem = document.querySelector('.game-status');
 // The main function, it is the one responsible for running the game
 
-let btnContainer = document.querySelector('.weapons');
+const btnContainer = document.querySelector('.weapons');
 
 btnContainer.addEventListener('click', playGame);
 
