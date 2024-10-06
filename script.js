@@ -134,13 +134,7 @@ function playGame(event){
             (computerScore === 5)? gameWinner = "computer": gameWinner = "user";
 
             // remove the shadow and size effects
-            userImgDisplay.classList.remove('winner');
-            userImgDisplay.classList.remove('looser');
-            userImgDisplay.classList.remove('tie');
-
-            computerImgDisplay.classList.remove('winner');
-            computerImgDisplay.classList.remove('looser');
-            computerImgDisplay.classList.remove('tie');
+            resetImgEffects();
 
             // tie will add a gray background,
             // and will return the images to their original size
@@ -191,13 +185,7 @@ function playGame(event){
             }
 
             // remove the classes
-            userImgDisplay.classList.remove('winner');
-            userImgDisplay.classList.remove('looser');
-            userImgDisplay.classList.remove('tie');
-
-            computerImgDisplay.classList.remove('winner');
-            computerImgDisplay.classList.remove('looser');
-            computerImgDisplay.classList.remove('tie');
+            resetImgEffects();
 
 
             switch(roundWinner){
