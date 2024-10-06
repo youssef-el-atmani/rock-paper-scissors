@@ -4,7 +4,6 @@ let userChoice = "";
 let computerScore = 0;
 let userScore = 0;
 
-let roundCounter = 1;
 let roundWinner = "";
 
 let gameWinner = "";
