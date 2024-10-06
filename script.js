@@ -202,32 +202,5 @@ function playGame(event){
                     computerImgDisplay.classList.add('tie');
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-        // computerChoice = getComputerChoice();
-        // userChoice = getUserChoice();
-
-        // roundWinner = playRound(userChoice, computerChoice);
-
-        // updateScore(roundWinner);
-
-        // displayRoundData();
-        // ++roundCounter;
-
     }
-
-
-    // displayGameWinner();
-
-    // console.log(`\n`);
-    // console.log("If you want to play a new game, call newGame() function from the console: just type newGame(), and don't forget the parenthesis ()")
 }
