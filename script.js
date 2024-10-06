@@ -83,12 +83,6 @@ function resetGameData(){
     gameStatusElem.textContent = "Waiting for game to start ...";
 }
 
-function newGame(){
-    console.clear();
-    resetGameData();
-    playGame();
-}
-
 let gameStatusElem = document.querySelector('.game-status');
 // The main function, it is the one responsible for running the game
 
