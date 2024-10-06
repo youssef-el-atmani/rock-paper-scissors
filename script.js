@@ -64,24 +64,6 @@ function updateScoreAndDisplayIt(roundWinner){
     }
 }
 
-
-function displayGameWinner(){
-    if(userScore === computerScore) {
-        console.log(`\n`);
-        console.log(">>>>>> IT IS A TIE GAME <<<<<<");
-    }
-
-    else if(userScore > computerScore){
-        console.log(`\n`);
-        console.log(">>>>>> You're the WINNER! <<<<<<");
-    }
-    else{
-        console.log(`\n`);
-        console.log(">>>>>> You lost; the Computer is the GAME WINNER <<<<<<");
-    }
-
-}
-
 // resetGameData() returns the game to the initial state
 function resetGameData(){
 
